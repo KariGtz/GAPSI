@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Prueba</string>
+    <string name="name_product">Nombre del Producto</string>
+    <string name="location_product">Ubicación</string>
+    <string name="price_product">Precio</string>
+    <string name="search">Buscar</string>
+    <string name="recent_search">Búsquedas recientes</string>
+    <string name="results_search">Resultados de tu búsqueda...</string>
 </resources>
