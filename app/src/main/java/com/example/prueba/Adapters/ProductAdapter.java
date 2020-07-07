@@ -11,17 +11,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.prueba.Model.Product;
+import com.example.prueba.Model.Record;
 import com.example.prueba.R;
 
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
 
-    private List<Product> mProductList;
+    private List<Record> mProductList;
     private Context mContext;
 
-    public ProductAdapter(List<Product> productList, Context context) {
+    public ProductAdapter(List<Record> productList, Context context) {
         this.mProductList = productList;
         this.mContext = context;
     }
@@ -37,11 +37,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.nameProduct.setText(mProductList.get(position).getTitulo());
-        holder.priceProduct.setText("$" + mProductList.get(position).getPrecio());
-        holder.locationProduct.setText(mProductList.get(position).getUbicacion());
+        holder.nameProduct.setText(mProductList.get(position).getProductDisplayName());
+        holder.priceProduct.setText("$" + mProductList.get(position).getListPrice());
+        holder.locationProduct.setText(mProductList.get(position).getGroupType());
 
-        Glide.with(mContext).load(mProductList.get(position).getImagen()).into(holder.imgProduct);
+        Glide.with(mContext).load(mProductList.get(position).getSmImage()).into(holder.imgProduct);
 
     }
 

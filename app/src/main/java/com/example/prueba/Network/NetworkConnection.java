@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkConnection {
 
-    public static final String BASE_URL = "https://shoppapp.liverpool.com.mx/appclienteservices/";
+    public static final String BASE_URL = "https://shoppapp.liverpool.com.mx/appclienteservices/services/";
     public static Retrofit retrofit;
 
     public static Retrofit getApiLiverpool() {
